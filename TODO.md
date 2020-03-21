@@ -2,8 +2,10 @@
 
 Work log for the k8s project.
 
-- [ ] Add EC2 instance for initial testing of vpc connectivity.
+- [ ] EC2 instance for app worker.
 
 # WIP
+
+- [ ] EC2 instance for web worker.
 
 # DONE
