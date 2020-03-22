@@ -38,8 +38,9 @@ data "aws_ami" "amzn2" {
 
 resource "aws_instance" "web_worker_01" {
   ami                    = data.aws_ami.amzn2.id
-  instance_type          = var.worker_instance_type
   availability_zone      = "${var.region}a"
+  iam_instance_profile   = aws_iam_instance_profile.web_worker_instance_profile.name
+  instance_type          = var.worker_instance_type
   subnet_id              = var.web_subnet_a_id
   tags = {
     Name = "${var.stack_name}-web-worker-01"
