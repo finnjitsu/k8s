@@ -28,7 +28,7 @@ data "aws_ami" "amzn2" {
 
 /*resource "aws_instance" "app_worker_01" {
   ami                    = data.aws_ami.amzn2.id
-  instance_type          = var.ec2_instance_type
+  instance_type          = var.worker_instance_type
   availability_zone      = "${var.region}a"
   subnet_id              = var.app_subnet_a_id
   tags = {
@@ -38,7 +38,7 @@ data "aws_ami" "amzn2" {
 
 resource "aws_instance" "web_worker_01" {
   ami                    = data.aws_ami.amzn2.id
-  instance_type          = var.ec2_instance_type
+  instance_type          = var.worker_instance_type
   availability_zone      = "${var.region}a"
   subnet_id              = var.web_subnet_a_id
   tags = {
